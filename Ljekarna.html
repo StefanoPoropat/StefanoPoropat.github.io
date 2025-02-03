@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="center">Narudžbenica Lijekova</h2>
+    <form method="POST" action="ljekarna.php" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <th>Artikl</th>
+                <th>Količina</th>
+            </tr>
+            <tr>
+                <td>Andol</td>
+                <td><input type="number" name="andol" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td>Aspirin</td>
+                <td><input type="number" name="aspirin" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td>Vitamin C</td>
+                <td><input type="number" name="c" value="0" min="0"></td>
+            </tr>
+        </table>
+
+        <div class="center">
+            <label for="source">Kako ste saznali za našu ljekarnu?</label><br>
+            <select name="thing" id="source" required>
+                <option value="">---Odaberi---</option>
+                <option value="Ja sam redovan kupac">Ja sam redovan kupac</option>
+                <option value="TV reklama">TV reklama</option>
+                <option value="Halo oglasi">Halo oglasi</option>
+            </select>
+            <p id="error-message" class="error" style="display: none;">Molimo odaberite valjanu opciju.</p>
+        </div>
+
+        <button type="submit">Naruči</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const select = document.getElementById('source');
+            const errorMessage = document.getElementById('error-message');
+
+            if (select.value === "") {
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+            errorMessage.style.display = "none";
+            return true;
+        }
+    </script>
+</body>
+</html>
