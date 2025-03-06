@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://yourdomain.com/pocetna.html</loc>
+    <loc>https://stefanoporopat.github.io/pocetna.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- About Us Page -->
   <url>
-    <loc>https://yourdomain.com/oNama.html</loc>
+    <loc>https://stefanoporopat.github.io/oNama.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Gallery Page -->
   <url>
-    <loc>https://yourdomain.com/galerija.html</loc>
+    <loc>https://stefanoporopat.github.io/galerija.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -27,7 +27,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://yourdomain.com/kontakti.html</loc>
+    <loc>https://stefanoporopat.github.io/kontakti.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -35,7 +35,7 @@
 
     <!-- New Page (Check Content) -->
   <url>
-    <loc>https://yourdomain.com/newPage.html</loc>
+    <loc>https://stefanoporopat.github.io/newPage.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -43,7 +43,7 @@
 
     <!-- Reference Page (Check Content) -->
   <url>
-    <loc>https://yourdomain.com/reference.html</loc>
+    <loc>https://stefanoporopat.github.io/reference.html</loc>
     <lastmod>2025-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
