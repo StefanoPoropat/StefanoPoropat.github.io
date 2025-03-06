@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Početna</title>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <link rel="icon" href="img/bLab-old.png">
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+
+<body id="section1">
+    <div class="window">
+        <header class="animLeft">
+            <div class="nav">
+                <a href="pocetna.html" class="slideInDown"><img class="logo" src="img/bLab.png" alt="BambuLab Logo"></a>
+                <nav>
+                    <a href="pocetna.html" class="nav-item">Početna</a>
+                    <a href="kontakti.html" class="nav-item">Kontakti</a>
+                    <a href="galerija.html" class="nav-item">Galerija</a>
+                    <a href="oNama.html" class="nav-item">O nama</a>
+                    <a href="reference.html" class="nav-item">Reference</a>
+                    <a href="newPage.html" class="nav-item">WIP</a>
+                    <div class="dropdown">
+                        <p class="dropbtn">Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </p>
+                        <div class="dropdown-content">
+                            <a href="https://makerworld.com/en/">Makerworld</a>
+                            <a href="https://www.thingiverse.com">Thingiverse</a>
+                            <a href="https://www.printables.com">Printables</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="intro fadeIn">
+                <div class="txtB1">
+                    <h3><em>Bambu Lab</em></h3>
+                    <p>Famous for the best printers on the market</p>
+                </div>
+                <div class="images fadeInUp">
+                    <img class="imgBoat" src="img/Boat.png" alt="Boat">
+                    <img class="imgL" src="img/X1C.png" alt="X1C">
+                </div>
+            </section>
+            <section class="content">
+                <article class="textStuff fadeInUp">
+                    <h4>About Bambu Lab X1 3D Printer</h4>
+                    <p class="description">Printing is as smooth as anything. It can print anything you want in record
+                        time.</p>
+                    <p class="details">The X1 3D printer is a machine that uses plastic filament as the material for
+                        creating 3D objects.
+                        Most of the time, the printable objects are files with the .stl extension that hold the 3D model
+                        which needs to be processed before it’s ready to be printed with a piece of software called a
+                        slicer.
+                        The slicer, in our case the Bambu Lab Studio, takes that .stl file and slices it into layers
+                        which are then printed by the X1. All these slices are then converted into code, a type of
+                        language which tells the machine how to move its axis to print the model.
+                        Besides the movement, the slicer is also able to integrate various other settings inside the
+                        generated file, like the temperatures of the filament, printing speeds, and generate supports
+                        for some sections of the print.</p>
+                    <div class="videos fadeInUp">
+                        <video class="video" controls autoplay loop muted>
+                            <source src="video/Dragon.mp4" type="video/mp4">
+                        </video>
+                        <video class="video" controls autoplay loop muted>
+                            <source src="video/Duck.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="iframes fadeInUp">
+                        <iframe src="https://www.youtube.com/embed/Hw5uR1ByxPQ/?controls=1&autoplay=1&mute=1"
+                            allow="autoplay"></iframe>
+                        <iframe src="https://www.youtube.com/embed/jAS-GKmQ_5o/?controls=1&autoplay=1&mute=1"
+                            allow="autoplay"></iframe>
+                    </div>
+                </article>
+                <div id="MP4" class="back-to-top fadeIn">
+                    <a href="#section1">Back To Top</a>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer class="fadeIn">
+            <div id="CounterVisitor"></div>
+            <script type="text/javascript" src="js/visitorCounter.js"></script>
+            <p>&copy; Made by Stefano Poropat. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

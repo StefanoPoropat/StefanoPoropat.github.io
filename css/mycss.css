@@ -1,0 +1,450 @@
+/* General Styles */
+html {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #00c6ff, #0072ff);
+	overflow-x: hidden;
+}
+
+.window {
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+	background: linear-gradient(135deg, #fff, #e0f7fa);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+header {
+	z-index: 10;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 0;
+	border-radius: 10px 10px 0 0;
+	position: fixed;
+	/*overflow: hidden;*/
+	width: 1200px;
+	top: 0;
+	text-align: center;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	/* Vertically centers items in the navbar */
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.nav img.logo {
+	height: 50px;
+	width: auto;
+	margin-right: 20px;
+	transition: transform 0.3s;
+}
+
+.nav img.logo:hover {
+	transform: scale(1.1);
+}
+
+.nav nav {
+	display: flex;
+}
+
+.nav-item {
+	margin-left: 20px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	transition: transform 0.3s;
+	/* Add transition for transform */
+}
+
+.nav-item:hover {
+	color: #ddd;
+	transform: scale(1.15);
+	/* Scale up by 15% on hover */
+}
+
+
+
+.intro {
+	text-align: center;
+	padding: 20px;
+}
+
+.intro .txtB1 {
+	background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.imgBoat,
+.imgL {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.imgBoat:hover,
+.imgL:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+.content {
+	padding: 20px;
+}
+
+.textStuff {
+	background: linear-gradient(135deg, #ffffff, #e3f2fd);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.textStuff h4 {
+	margin-top: 0;
+	color: #333;
+}
+
+.description {
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+.details {
+	font-size: 16px;
+	color: #777;
+}
+
+.videos,
+.iframes {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.video {
+	width: 45%;
+	height: auto;
+}
+
+.iframes iframe {
+	width: 45%;
+	height: 400px;
+	/* Increased height for the iframes */
+}
+
+.back-to-top {
+	text-align: center;
+	margin-top: 20px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px 0;
+	background-color: #333;
+	color: #fff;
+	border-radius: 0 0 10px 10px;
+}
+
+/* Form Styles */
+form {
+	background: linear-gradient(135deg, #ffffff, #e3f2fd);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+form select {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #333;
+}
+
+form button {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+form button:hover {
+	background-color: #555;
+}
+
+.gallery-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+.gallery-item {
+	flex: 0 1 calc(45% - 20px);
+	margin-bottom: 20px;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	max-height: 300px;
+	/* Limit the maximum height of the image */
+	object-fit: contain;
+	/* Ensure the entire image fits inside the container */
+	object-position: center;
+	/* Center the image horizontally and vertically */
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item video {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+	padding: 20px 0;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+.textStuff {
+	padding: 20px;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+	text-align: center;
+	padding: 20px 0;
+	color: #777;
+	font-size: 14px;
+}
+
+.slideInDown {
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 1s ease-in-out both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeInUp {
+	animation: fadeInUp 1s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animLeft {
+	animation: slideInLeft 1s ease-in-out both;
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.details {
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.txtB1 h3,
+.description,
+.textStuff h4,
+footer p {
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.49);
+}
+
+h1,
+form label,
+footer p {
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.49);
+}
+
+.gallery-section p a {
+	box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.49);
+}
+
+.reference-page h3,
+.reference-page a {
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.49);
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	height: 300px;
+	/* Set a fixed height for the images container */
+}
+
+.images img {
+	max-height: 100%;
+	/* Ensure images maintain aspect ratio */
+	width: auto;
+	/* Allow images to resize proportionally */
+}
+
+.oneLastThing {
+	text-indent: 5%;
+}
+
+.counter-item {
+	background-color: #ccc;
+	padding: 5px;
+}
+
+#incrementCounter {
+	margin-top: 20px;
+}
+
+#jumpingImage {
+	box-shadow: none;
+	/* Remove the box shadow */
+	border-radius: 0;
+	/* Remove the border radius */
+}
+
+.error-message {
+	color: red;
+	margin-left: 10px;
+	/* Space between input and error message */
+	display: inline;
+	/* Ensure it stays inline with input */
+}
+
+/* Navbar layout alignment */
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+/* Dropdown alignment only for navbar layout */
+.nav .dropdown {
+	display: flex;
+	align-items: center;
+}

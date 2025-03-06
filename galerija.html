@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Galerija</title>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <link rel="icon" href="img/bLab-old.png">
+    <script type="text/javascript" src="js/myScript.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center; /* Center align the heading */
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+
+        .list {
+            height: 200px;
+            position: relative; /* Changed to relative to avoid jumping */
+            margin: 0 auto; /* Centering the list */
+            width: 200px; /* Fixed width for consistent layout */
+            z-index: 10; /* Ensures the list is above other elements */
+        }
+
+        .list li {
+            list-style-type: none;
+            width: 100%; /* Full width of the container */
+            height: 200px; /* Set a fixed height */
+            opacity: 0.25; /* Lower opacity by default */
+            position:absolute;
+            left: 50%;
+            margin-left: -100px; /* Center the images */
+            border-radius: 2px;
+            background: #9c89b800;
+            transition: transform 1s, opacity 1s;
+        }
+
+        .list .act {
+            opacity: 1; /* 100% opacity for the active image */
+        }
+
+        .list .prev,
+        .list .next {
+            cursor: pointer;
+        }
+
+        .list .prev {
+            transform: translateX(-220px) scale(0.85);
+        }
+
+        .list .next {
+            transform: translateX(220px) scale(0.85);
+        }
+
+        .list .hide {
+            transform: translateX(-420px) scale(0.85);
+        }
+
+        .list .new-next {
+            transform: translateX(420px) scale(0.85);
+        }
+
+        .list .hide,
+        .list .new-next {
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .swipe {
+            width: 270px;
+            height: 200px;
+            position: absolute;
+            background-color: green;
+            border-radius: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        /* Gallery Styles */
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px; /* Space between carousel and gallery */
+        }
+
+        .gallery-item {
+            flex: 0 1 calc(30% - 20px); /* Adjusted for 3 items to fit in a row */
+            margin-bottom: 20px;
+            position: relative; /* Needed for absolute positioning of images */
+            overflow: hidden; /* Prevents overflow of content */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            max-height: 200px; /* Limit the maximum height of the image */
+            object-fit: cover; /* Ensures the image covers the container */
+            object-position: center; /* Center the image */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            opacity: 1; /* Scale up and set to full opacity on hover */
+        }
+
+        /* Spinning effect */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spin {
+            animation: spin 20s linear infinite; /* Adjust duration as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <header class="animLeft">
+            <div class="nav">
+                <a href="pocetna.html" class="slideInDown"><img class="logo" src="img/bLab.png" alt="BambuLab Logo"></a>
+                <nav>
+                    <a href="pocetna.html" class="nav-item">Početna</a>
+                    <a href="kontakti.html" class="nav-item">Kontakti</a>
+                    <a href="galerija.html" class="nav-item">Galerija</a>
+                    <a href="oNama.html" class="nav-item">O nama</a>
+                    <a href="reference.html" class="nav-item">Reference</a>
+                    <a href="newPage.html" class="nav-item">WIP</a>
+                    <div class="dropdown">
+                        <p class="dropbtn">Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </p>
+                        <div class="dropdown-content">
+                            <a href="https://makerworld.com/en/">Makerworld</a>
+                            <a href="https://www.thingiverse.com">Thingiverse</a>
+                            <a href="https://www.printables.com">Printables</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Galerija</h1> <!-- Centered heading -->
+            <ul class="list">
+                <li class="hide"><img src="img/Duck.png" alt="duck"></li>
+                <li class="prev"><img src="img/Dragon.png" alt="dragon"></li>
+                <li class="act"><img src="img/GreenDragon.png" alt="GreenDragon"></li>
+                <li class="next"><img src="img/Boat.png" alt="boat"></li>
+                <li class="next new-next"><img src="img/X1C.png" alt="BambuLab Logo"></li>
+            </ul>
+
+            <div class="swipe"></div>
+
+            <section class="gallery-section">
+                <div class="gallery-item"><img src="img/X1C.png" alt="BambuLab printer" class="imgL"></div>
+                <div class="gallery-item"><img src="img/Boat.png" alt="Boat" class="imgBoat"></div>
+                <div class="gallery-item">
+                    <video class="video" controls autoplay loop muted>
+                        <source src="video/Duck.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video class="video" controls autoplay loop muted>
+                        <source src="video/Dragon.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item"><img src="img/Duck.png" alt="Duck" class="imgL"></div>
+                <div class="gallery-item"><img src="img/GreenDragon.png" alt="Green Dragon" class="imgL"></div>
+                <div class="gallery-item"><img src="img/bLab-old.png" alt="Logo" class="imgL"></div>
+                <div class="gallery-item"><img src="img/bLab.png" alt="Logo" class="imgL"></div>
+            </section>
+        </main>
+        <hr>
+        <footer class="fadeIn">
+            <div id="CounterVisitor"></div>
+            <script type="text/javascript" src="js/visitorCounter.js"></script>
+            <p>&copy; Made by Stefano Poropat. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+<script src="js/hammer.js"></script>
+<script src="js/rotationScript.js"></script>
+<script>
+    // JavaScript for Carousel
+    const listItems = document.querySelectorAll('.list li');
+    const totalItems = listItems.length;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        listItems.forEach((item, index) => {
+            item.classList.remove('act', 'prev', 'next', 'hide', 'new-next');
+
+            if (index === currentIndex) {
+                item.classList.add('act');
+            } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
+                item.classList.add('prev');
+            } else if (index === (currentIndex + 1) % totalItems) {
+                item.classList.add('next');
+            } else if (index === (currentIndex - 2 + totalItems) % totalItems) {
+                item.classList.add('hide');
+            } else if (index === (currentIndex + 2) % totalItems) {
+                item.classList.add('new-next');
+            }
+        });
+    }
+
+    document.querySelector('.list').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalItems; // Move to next image
+        updateCarousel();
+    });
+
+    // Initialize the carousel
+    updateCarousel();
+</script>
+
+</html>

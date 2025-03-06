@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kontakti</title>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <link rel="icon" href="img/bLab-old.png">
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+
+<body>
+    <div class="window">
+        <header class="animLeft">
+            <div class="nav">
+                <a href="pocetna.html" class="slideInDown"><img class="logo" src="img/bLab.png" alt="BambuLab Logo"></a>
+                <nav>
+                    <a href="pocetna.html" class="nav-item">Početna</a>
+                    <a href="kontakti.html" class="nav-item">Kontakti</a>
+                    <a href="galerija.html" class="nav-item">Galerija</a>
+                    <a href="oNama.html" class="nav-item">O nama</a>
+                    <a href="reference.html" class="nav-item">Reference</a>
+                    <a href="newPage.html" class="nav-item">WIP</a>
+                    <div class="dropdown">
+                        <p class="dropbtn">Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </p>
+                        <div class="dropdown-content">
+                            <a href="https://makerworld.com/en/">Makerworld</a>
+                            <a href="https://www.thingiverse.com">Thingiverse</a>
+                            <a href="https://www.printables.com">Printables</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1 class="fadeIn">Kontaktirajte Nas</h1>
+            <form id="contactForm" onsubmit="return validateForm()" class="fadeIn">
+                <div id="errorMessage" style="color: red; display: none;"></div> <!-- Error message div -->
+                <label for="ime">Ime:</label>
+                <input type="text" id="ime" name="ime" required>
+
+                <label for="prezime">Prezime:</label>
+                <input type="text" id="prezime" name="prezime" required>
+
+                <label for="telefon">Broj telefona:</label>
+                <input type="text" id="telefon" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="lozinka">Lozinka:</label>
+                <input type="password" id="lozinka" name="lozinka" required>
+
+                <label for="spol">Koji je vaš spol?</label>
+                <select id="spol" name="spol" required>
+                    <option value="ODABERI" selected>ODABERI</option>
+                    <option value="musko">Muško</option>
+                    <option value="zensko">Žensko</option>
+                    <option value="nezelim">Ne želim reći</option>
+                    <option value="ostalo">Ostalo</option>
+                </select>
+
+
+                <label>Koju ocjenu dajete našoj web stranici?</label>
+                <p><input type="radio" id="ocjena1" name="ocjena" value="5">5</p>
+                <p><input type="radio" id="ocjena2" name="ocjena" value="4" disabled>4</p>
+                <p><input type="radio" id="ocjena3" name="ocjena" value="3" disabled>3</p>
+                <p><input type="radio" id="ocjena4" name="ocjena" value="2" disabled>2</p>
+                <p><input type="radio" id="ocjena5" name="ocjena" value="1" disabled>1</p>
+
+                <label>Kako ste saznali za našu web-stranicu?</label>
+                <p><input type="checkbox" id="prijatelj" name="sastranica" value="prijatelj">Od prijatelja</p>
+                <p><input type="checkbox" id="obitelj" name="sastranica" value="obitelj">Od člana obitelji</p>
+                <p><input type="checkbox" id="slucajno" name="sastranica" value="slucajno">Slučajno</p>
+                <p><input type="checkbox" id="internet" name="sastranica" value="internet">Internet pretraživač</p>
+
+                <label for="napomene">Napomene:</label><br>
+                <textarea id="napomene" name="napomene" rows="4" cols="50"></textarea><br><br>
+
+                <button type="submit">Pošalji</button>
+            </form>
+            <div id="confirmationMessage" style="display: none;" class="fadeIn">
+                Vaša poruka je uspješno poslana!
+            </div>
+        </main>
+        <hr>
+        <footer class="fadeIn">
+            <div id="CounterVisitor"></div>
+            <script type="text/javascript" src="js/visitorCounter.js"></script>
+            <p>&copy; Made by Stefano Poropat. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
