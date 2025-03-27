@@ -101,6 +101,10 @@
             position: relative; /* Needed for absolute positioning of images */
             overflow: hidden; /* Prevents overflow of content */
         }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            transition: all 0.6s linear;
+        }
 
         .gallery-item img {
             width: 100%;
@@ -110,10 +114,13 @@
             object-position: center; /* Center the image */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform witdh, height;
             transition: transform 0.3s, opacity 0.3s;
         }
 
         .gallery-item img:hover {
+            transform: scaleX(5%);
+            transform: scaleY(5%);
             transform: scale(1.05);
             opacity: 1; /* Scale up and set to full opacity on hover */
         }
